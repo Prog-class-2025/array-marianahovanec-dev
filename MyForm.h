@@ -107,7 +107,7 @@ namespace Project1 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(562, 279);
+			this->label1->Location = System::Drawing::Point(487, 252);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(0, 13);
 			this->label1->TabIndex = 3;
@@ -181,22 +181,22 @@ namespace Project1 {
 
 		if (comboBox1->SelectedIndex == 4) // Парні/непарні
 		{
-			int countEven = 0;
-			int countOdd = 0;
+			int p = 0;
+			int n = 0;
 
 			for (int i = 0; i < 5; i++)
 			{
 				if (mas1[i] % 2 == 0)
 				{
-					countEven++;
+					p++;
 				}
 				else
 				{
-					countOdd++;
+					n++;
 				}
 			}
 
-			label1->Text = "Парних елементів: " + Convert::ToString(countEven) + "\nНепарних елементів: " + Convert::ToString(countOdd);
+			label1->Text = "Парних елементів: " + Convert::ToString(p) + "\nНепарних елементів: " + Convert::ToString(n);
 		}
 
 		if (comboBox1->SelectedIndex == 5) // Заповнити матрицю
@@ -224,7 +224,10 @@ namespace Project1 {
 
 		if (comboBox1->SelectedIndex == 7) // Діагональ
 		{
-			//TODO: Вивести елементи головної діагоналі матриці
+			int diagsum = 0;
+			for (int i = 0; i < 5; j++)
+				diagsum += matrix[i][j];
+			MessageBox::Show("Діагональ: " + diagsum.ToString());
 		}
 
 		if (comboBox1->SelectedIndex == 8) // Транспонування

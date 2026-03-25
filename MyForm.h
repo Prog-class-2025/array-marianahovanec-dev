@@ -225,8 +225,8 @@ namespace Project1 {
 		if (comboBox1->SelectedIndex == 7) // Діагональ
 		{
 			int diagsum = 0;
-			for (int i = 0; i < 5; j++)
-				diagsum += matrix[i][j];
+			for (int i = 0; i < 5; i++)
+				diagsum += matrix[i][i];
 			MessageBox::Show("Діагональ: " + diagsum.ToString());
 		}
 

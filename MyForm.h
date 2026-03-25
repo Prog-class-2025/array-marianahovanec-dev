@@ -153,7 +153,7 @@ namespace Project1 {
 			int sum = 0;
 			for (int i = 0; i < 5; i++)
 				sum += mas1[1];
-			label1->Text = "Сума елементів масиву =" + Convert:: ToString(sum);
+			label1->Text = "Сума елементів масиву = " + Convert:: ToString(sum);
 
 		}
 
@@ -165,12 +165,19 @@ namespace Project1 {
 				if (mas1[i] < min)
 					min = mas1[i];
 			}
-			label1->Text = "Мінімальний елемент масиву =" + Convert::ToString(min);
+			label1->Text = "Мінімальний елемент масиву = " + Convert::ToString(min);
 		}
 
 		if (comboBox1->SelectedIndex == 3) // Максимум
-		{
-			//TODO: Максимальний елемент масиву
+			{
+				int max = mas1[0];
+				for (int i = 1; i < 5; i++)
+				{
+					if (mas1[i] > max)
+						max = mas1[i];
+				}
+				label1->Text = "Максимальний елемент масиву = " + Convert::ToString(max);
+			}
 		}
 
 		if (comboBox1->SelectedIndex == 4) // Парні/непарні

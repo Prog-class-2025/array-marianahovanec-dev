@@ -178,12 +178,27 @@ namespace Project1 {
 				}
 				label1->Text = "Максимальний елемент масиву = " + Convert::ToString(max);
 			}
-		}
 
 		if (comboBox1->SelectedIndex == 4) // Парні/непарні
 		{
-			//TODO: Вивести кількість парних та непарних елементів масиву
+			int countEven = 0;
+			int countOdd = 0;
+
+			for (int i = 0; i < 5; i++)
+			{
+				if (mas1[i] % 2 == 0)
+				{
+					countEven++;
+				}
+				else
+				{
+					countOdd++;
+				}
+			}
+
+			label1->Text = "Парних елементів: " + Convert::ToString(countEven) + "\nНепарних елементів: " + Convert::ToString(countOdd);
 		}
+
 		if (comboBox1->SelectedIndex == 5) // Заповнити матрицю
 		{
 			for (int i = 0; i < 5; i++)
